@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <!-- Encabezado / Navbar -->
+  <header class="header">
+    <a href="#" class="logo">SMCONSTRUCCION</a>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio"></section>
+
+  <!-- Sección Nosotros -->
+  <section id="nosotros" class="container-nosotros">
+    <div class="nosotros-text">
+      <h1>¿Quienes somos?</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium excepturi ut fugit, sequi ab, provident magni qui modi laudantium nesciunt velit vitae a eligendi, officiis eveniet earum culpa! Magnam, harum?</p>
+    </div>
+  </section>
+
+  <!-- Sección Servicios -->
+  <section id="servicios">
+    <div class="grid">
+      <div class="item imagen" style="background-image: url('/img/servicio_steel.jpg');"></div>
+      <div class="item texto steel-texto">
+        <h2>Steel Frame</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit viverra, mi lobortis vehicula curabitur imperdiet convallis praesent suspendisse, faucibus porta nibh blandit malesuada himenaeos...</p>
+      </div>
+
+      <div class="item texto ceramicos-texto">
+        <h2>Ceramicos</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit viverra, mi lobortis vehicula curabitur imperdiet convallis praesent suspendisse, faucibus porta nibh blandit malesuada himenaeos...</p>
+      </div>
+      <div class="item imagen" style="background-image: url('/img/ceramica servicio.jpg');"></div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="form-container">
+      <form action="https://formspree.io/f/xrbaebge" method="POST">
+        <label for="nombre">Nombre completo *</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono">
+
+        <label for="tipo">Tipo de proyecto</label>
+        <select id="tipo" name="tipo">
+          <option>Selecciona el tipo de proyecto</option>
+          <option>Vivienda unifamiliar</option>
+          <option>Duplex</option>
+          <option>Local Comercial</option>
+          <option>Ampliacion</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Correo electronico" required>
+
+        <label for="descripcion">Descripción del proyecto</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Cuentanos un poco sobre tu proyecto..."></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 - Tu Empresa</p>
+  </footer>
+
+  <script src="/script/script.js"></script>
+
+</body>
+</html>

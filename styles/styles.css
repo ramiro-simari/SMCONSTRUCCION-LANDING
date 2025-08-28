@@ -1,0 +1,331 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header / Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.7s;
+    padding: 20px 40px;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+}
+
+.header.abajo {
+    background: #fff;
+    padding: 15px 20px;
+}
+
+.header .logo {
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.header.abajo .logo {
+    color: #000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header.abajo .nav-links li a {
+    color: #000;
+}
+
+/* Menu hamburguesa */
+.menu-toggle {
+    display: none; /* se activa solo en móviles */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.header.abajo .menu-toggle .bar {
+    background-color: #000;
+}
+
+/* Animación tipo X */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sección Nosotros */
+.container-nosotros {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/img/fondo.jpg) no-repeat center center/cover;
+}
+
+.container-nosotros .nosotros-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    max-width: 90%;
+}
+
+.container-nosotros .nosotros-text h1 {
+    font-size: 5rem;
+}
+
+.container-nosotros .nosotros-text p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Sección Servicios */
+#servicios {
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(50vh, auto);
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+.imagen {
+    background-size: cover;
+    background-position: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.texto h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+}
+
+.texto p {
+    max-width: 600px;
+    font-size: 1.4rem;
+}
+
+/* Colores de fondo */
+.steel-texto {
+    background-color: #3b3230;
+}
+
+.ceramicos-texto {
+    background-color: #c79364;
+}
+
+/* Formulario Contacto Mejorado */
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+#contacto {
+    background: #be8f65;
+    padding: 100px 20px;
+}
+
+#contacto h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #3b3230;
+    text-decoration: underline;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contacto label {
+    font-weight: 600;
+    color: #333;
+    font-size: 18px;
+}
+
+#contacto input,
+#contacto select,
+#contacto textarea {
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+#contacto input:focus,
+#contacto select:focus,
+#contacto textarea:focus {
+    border-color: #c79364;
+    box-shadow: 0 0 8px rgba(199, 147, 100, 0.4);
+    outline: none;
+}
+
+#contacto textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contacto button {
+    background: #c79364;
+    color: #fff;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contacto button:hover {
+    background: #3b3230;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #3b3230;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1rem;
+    border-top: 4px solid #c79364;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .container-nosotros .nosotros-text h1 { font-size: 4rem; }
+    .container-nosotros .nosotros-text p { font-size: 1.2rem; }
+    .texto h2 { font-size: 3rem; }
+    .texto p { font-size: 1.2rem; }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle { display: flex; }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        height: calc(100vh - 70px);
+        width: 200px;
+        background: #3b3230;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active { transform: translateX(0); }
+    .nav-links li { margin: 20px 0; }
+
+    .container-nosotros .nosotros-text h1 { font-size: 3rem; }
+    .container-nosotros .nosotros-text p { font-size: 1rem; }
+
+    .grid { grid-template-columns: 1fr; }
+
+    .texto h2 { font-size: 2rem; }
+    .texto p { font-size: 1rem; max-width: 100%; }
+
+    #contacto h2 { font-size: 2.5rem; }
+    .form-container { padding: 30px 20px; }
+}
+
+@media screen and (max-width: 480px) {
+    .header .logo { font-size: 1.5rem; }
+    .nav-links li a { font-size: 14px; }
+    .container-nosotros .nosotros-text h1 { font-size: 2rem; }
+    .texto h2 { font-size: 1.5rem; }
+    .texto p { font-size: 0.9rem; }
+    #contacto label { font-size: 16px; }
+}
